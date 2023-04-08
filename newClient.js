@@ -22,9 +22,11 @@ btnSendtext.addEventListener('click', function(event) {
     collectText.innerText = `
         Bom dia, tudo bem?
 
+        Sou Alysson, da empresa AirMec.
+
         Observei que até o momento o título no valor de R$ ${value} com vencimento para ${formatteddate}, ainda encontra-se em aberto.
-        
-        Para facilitar, acabei de gerar um novo boleto com data atualizada.`
+
+        Sabemos que imprevistos acontecem. Por isso, acabei de gerar um novo boleto com data atualizada.`
 })
 
 function copyText() {

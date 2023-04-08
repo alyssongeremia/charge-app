@@ -4,6 +4,7 @@
     --bg-darkMode: #303030;
     --bg-buttons: #007FCA;
     --bg-inputs: #E8E8E8;
+    --bg-modal: #7ed679;
 
     --color-info: #009FFD;
     --color-icons: #009FFD;
@@ -98,6 +99,8 @@ menu span {
 main {
     color: var(--color-text);
     padding-top: 7.4rem;
+
+    position: relative;
 }
 
 .main-wrapper {
@@ -205,10 +208,46 @@ form button:hover {
     transform: scale(1.07);
 }
 
+dialog {
+    width: 20rem;
+    height: 5.2rem;
+
+    font-weight: bold;
+
+    background: var(--bg-modal);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+
+    position: absolute;
+    top: 1rem;
+
+    margin: auto;
+
+    border: none;
+    border-radius: .6rem;
+
+    animation: topDown 900ms ease-in-out;
+}
+
+@keyframes topDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 @media (max-width: 425px) {
     .page {
-        width: 32rem;
+        width: 39rem;
     }
 
     .logo h1 {
@@ -232,7 +271,7 @@ form button:hover {
     }
 
     form {
-        max-width: 32rem;
+        width: 100%;
         padding: 0 0 2.1rem 0;
     }
 
@@ -241,6 +280,6 @@ form button:hover {
     }
 
     .text-area {
-        max-width: 32rem;
+        width: 100%;
     }
 }
